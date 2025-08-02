@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALO Rank</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>VALORANT TRACKER</h1>
+    <h2>Put your information here & submit!</h2>
+    <form>
+      <div id="usernameform">
+        <label for="username" class="largefontsize">Username</label>
+        <input type="text" name="username" id="username" /> <br />
+      </div>
+      <div id="tagform">
+        <label for="tag" class="largefontsize">Tag (NO #)</label>
+        <input type="text" name="tag" id="tag" /> <br />
+      </div>
+      <div id="regionform">
+        <label for="region" class="largefontsize">Region (EU, NA, ...)</label>
+        <input type="text" name="region" id="region" /> <br />
+      </div>
+      <div id="platformform">
+        <label for="platform" id="lastcelloftableforms" class="largefontsize"
+          >Platform (PC/console)</label>
+        <input type="text" name="platform" id="platform" />
+      </div>
+    </form>
+    <div id="default-stats"></div>
+    <h3 id="last-five-games">Last Five Games:</h3>
+    <div id="games-container"></div>
+    <div id="testdiv"></div>
+    <button id="submit" onclick="useData()">SUBMIT</button>
+    <script src="./script.js"></script>
+  </body>
+</html>
