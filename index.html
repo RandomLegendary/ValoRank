@@ -5,35 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VALO Rank</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>VALORANT TRACKER</h1>
-    <h2>Put your information here & submit!</h2>
-    <form>
-      <div id="usernameform">
-        <label for="username" class="largefontsize">Username</label>
-        <input type="text" name="username" id="username" /> <br />
+    <div class="container">
+      <h1>VALORANT TRACKER</h1>
+      <h2>Put your information here & submit!</h2>
+      
+      <form class="search-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+          <label for="tag">Tag (NO #)</label>
+          <input type="text" id="tag" placeholder="Enter your tag">
+        </div>
+        <div class="form-group">
+          <label for="region">Region</label>
+          <select id="region">
+            <option value="">Select region</option>
+            <option value="eu">Europe (EU)</option>
+            <option value="na">North America (NA)</option>
+            <option value="ap">Asia Pacific (AP)</option>
+            <option value="kr">Korea (KR)</option>
+            <option value="latam">Latin America (LATAM)</option>
+            <option value="br">Brazil (BR)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="platform">Platform</label>
+          <select id="platform">
+            <option value="">Select platform</option>
+            <option value="pc">PC</option>
+            <option value="console">Console</option>
+          </select>
+        </div>
+        <button id="submit" type="button" onclick="useData()">
+          <i class="fas fa-search"></i> SEARCH
+        </button>
+      </form>
+
+      <div id="loading" class="loading-container">
+        <div class="loading-spinner"></div>
+        <p>Loading data...</p>
       </div>
-      <div id="tagform">
-        <label for="tag" class="largefontsize">Tag (NO #)</label>
-        <input type="text" name="tag" id="tag" /> <br />
+
+      <div id="default-stats" class="stats-container"></div>
+
+      <div id="last-five-games" class="section-header">
+        <h3>Last Five Games <span class="toggle-icon">+</span></h3>
       </div>
-      <div id="regionform">
-        <label for="region" class="largefontsize">Region (EU, NA, ...)</label>
-        <input type="text" name="region" id="region" /> <br />
-      </div>
-      <div id="platformform">
-        <label for="platform" id="lastcelloftableforms" class="largefontsize"
-          >Platform (PC/console)</label>
-        <input type="text" name="platform" id="platform" />
-      </div>
-    </form>
-    <div id="default-stats"></div>
-    <h3 id="last-five-games">Last Five Games:</h3>
-    <div id="games-container"></div>
-    <div id="testdiv"></div>
-    <button id="submit" onclick="useData()">SUBMIT</button>
+      <div id="games-container" class="games-container"></div>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
