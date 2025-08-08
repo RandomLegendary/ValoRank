@@ -1,11 +1,3 @@
 **VALO RANK**
 
-Download this code and unzip.
-
-run these two commands:
-
-cd valorant-api-proxy 
-
-node server.js
-
-Run the website
+Run the website at the top right or at https://randomlegendary.github.io/ValoRank/
