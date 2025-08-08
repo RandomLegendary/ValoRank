@@ -14,21 +14,21 @@ lastFiveGames.addEventListener("click", () => {
 
 async function getAccountData() {
   const response = await fetch(
-    `http://localhost:3000/valorant/account/${username.value}/${tag.value}`
+    `https://valorank-64i1.onrender.com/${username.value}/${tag.value}`
   );
   return await response.json();
 }
 
 async function getMatchList() {
   const response = await fetch(
-    `http://localhost:3000/valorant/matchlist/${region.value}/${username.value}/${tag.value}`
+    `https://valorank-64i1.onrender.com/${region.value}/${username.value}/${tag.value}`
   );
   return await response.json();
 }
 
 async function getMMR() {
   const response = await fetch(
-    `http://localhost:3000/valorant/mmr/${region.value}/${platform.value}/${username.value}/${tag.value}`
+    `https://valorank-64i1.onrender.com/${region.value}/${platform.value}/${username.value}/${tag.value}`
   );
   return await response.json();
 }
